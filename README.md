@@ -18,8 +18,8 @@ pip install -r requirements.txt
 # Data
 There are two dataset. 
 The 504 dataset comprises two types of video recordings: one featuring a person's upper body engaged in conversation with a talk of laughter, and the other featuring a person's upper body engaged in talk while displaying a smiling expression without laughter.
-The 290 dataset consists of the former type video.
-We use 290 dataset to train and test model.
+The 292 dataset consists of the former type video.
+We use 292 dataset to train and test model.
 
 ### JSON File Structure:
 ```
@@ -46,9 +46,9 @@ We use 290 dataset to train and test model.
 }
 ```
 ### Download Data
-If you want to download 290 dataset, run the following
+If you want to download 292 dataset, run the following
 ```
-python download_vid.py --json_path "./laughtalk_290_data_info.json"
+python download_vid.py --json_path "./laughtalk_292_data_info.json"
 ```
 
 If you want to download 504 dataset, run the following

@@ -126,7 +126,7 @@ def load_data(file_path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="download_vid")
-    parser.add_argument('--json_path', type=str, default="/local_data/urp1/aaa/data/laughtalk_290_data_info.json", help='Path for json')
+    parser.add_argument('--json_path', type=str, default="/local_data/urp1/aaa/data/laughtalk_292_data_info.json", help='Path for json')
     args = parser.parse_args()
 
     json_path = args.json_path  # json file path
