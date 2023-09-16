@@ -64,6 +64,7 @@ Our data undergoes a four-stage preprocessing procedure:
 3. we filter out video with excessive head movement or incomplete facial capture on the screen.
 4. we leave video where laughter lasts for more than 0.1 seconds, utilizing laugh_detection.
 
+If you want to run this preprocessing procedure, your custom dataset must consist of video of the upper body of a person.
 
 ### Using Your Own Dataset
 
