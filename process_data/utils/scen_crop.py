@@ -172,13 +172,13 @@ for video in cel_text:
                         c_change = False
                         p_time = c_time
                         c_time = cap.get(cv2.CAP_PROP_POS_MSEC)/1000
-                        if c_time - p_time > 4:
+                        if c_time - p_time > 3.5:
                             time['time'].append((p_time,c_time))
 
                 if y_nose_center < 20 or (img_w-x_left_cheek) < 10 or x_right_cheek < 10:
                     remove_yn =False
 
-                if width_portion < 10 or width_portion_r < 10 or x_diff < 5 or x_r_diff < 5 or x>20 or x < -12:
+                if width_portion < 10 or width_portion_r < 10 or x>20 or x < -13:
                     if c_change == False:
                         continue
 
@@ -188,7 +188,7 @@ for video in cel_text:
                         c_change = False
                         p_time = c_time
                         c_time = cap.get(cv2.CAP_PROP_POS_MSEC)/1000
-                        if c_time - p_time > 4:
+                        if c_time - p_time > 3.5:
                             time['time'].append((p_time,c_time-0.1))
 
                 else:
@@ -206,7 +206,7 @@ for video in cel_text:
         
     cap.release()
 
-    if (c_change == True) and (duration-c_time > 4):
+    if (c_change == True) and (duration-c_time > 3.5):
         time['time'].append((c_time,duration))
     if remove_yn == False:
         del(crop_time[video_name])

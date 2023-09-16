@@ -32,12 +32,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--model_path', type=str, default='checkpoints/in_use/resnet_with_augmentation')
 parser.add_argument('--config', type=str, default='resnet_with_augmentation')
 parser.add_argument('--threshold', type=str, default='0.2')
-parser.add_argument('--min_length', type=str, default='0.3')
+parser.add_argument('--min_length', type=str, default='0.1')
 parser.add_argument('--out_dir', type=str, default=None, help='Path for outputs')
 parser.add_argument('--videoFolder', type=str, default=None, help='Path for inputs')
 parser.add_argument('--save_to_audio_files', type=str, default='True')
 parser.add_argument('--start_cnt', type=int, default=0)
-parser.add_argument('--origin_VideoFolder', type=str, default="/local_data/urp1/data/242_data/final_process/processed_talk", help='Path for inputs, tmps and outputs')
 
 args = parser.parse_args()
 
@@ -148,7 +147,7 @@ for video_path in cel_text:
                     try:
                         
                         if duration > 10:
-                            if instance[1] - instance[0] > 4:
+                            if instance[1] - instance[0] > 3.5:
                                 move == True
                                 out_path = output_dir + "/" + video_name + ".mp4" 
                                 cnt_n = 0

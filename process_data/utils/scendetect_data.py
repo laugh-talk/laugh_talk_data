@@ -47,7 +47,7 @@ def process_ffmpeg_actions(raw_vid_path, save_folder, save_vid_name, time_period
             os.remove(out_path)
         else:
             duration = length/fps 
-            if duration < 4:
+            if duration < 3.5:
                 os.remove(out_path)
 # ---------------------------------------------------------
 cel_text = glob.glob(args.videoFolder + '/*.mp4')
