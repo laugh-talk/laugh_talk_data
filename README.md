@@ -57,6 +57,13 @@ python download_vid.py --json_path "./laughtalk_504_data_info.json"
 ```
 
 # Data Curation
+Our data undergoes a four-stage preprocessing procedure:
+
+1. we filter video to include only those containing active speakers, using TalkNet.
+2. we split video at scene transitions.
+3. we filter out video with excessive head movement or incomplete facial capture on the screen.
+4. we leave video where laughter lasts for more than 0.1 seconds, utilizing laugh_detection.
+
 
 ### Using Your Own Dataset
 
